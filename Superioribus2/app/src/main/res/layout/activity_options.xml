@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background"
+    android:id="@+id/layout_root">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_background">
+
+        <Button
+            android:text="&lt; Exercises"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button_exercises"
+            android:onClick="button_exercises_onClick"
+            android:background="@drawable/navi_background"
+            android:layout_margin="5dp"
+            android:minWidth="0dp"
+            android:minHeight="35dp"
+            android:padding="10dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:text="Options"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            style="@android:style/TextAppearance.Large"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/panel_background"
+            android:padding="10dp"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_background"
+                android:padding="5dp">
+
+                <TextView
+                    android:text="Words per exercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_size"
+                        android:layout_weight="1" />
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="50"
+                        android:progress="1"
+                        android:id="@+id/seekBar_size"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Reset XP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_resetXP"
+                android:onClick="button_resetXP_onClick"
+                android:background="@drawable/button2_background"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:text="Clear Image Cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_clearImgCache"
+                android:onClick="button_clearImgCache_onClick"
+                android:background="@drawable/button2_background"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:text="Clear Vocabulary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_clearVocabs"
+                android:onClick="button_clearVocabs_onClick"
+                android:background="@drawable/button2_background"
+                android:layout_margin="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

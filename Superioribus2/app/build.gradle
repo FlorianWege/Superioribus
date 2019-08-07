@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "moonlightflower.com.superioribus2"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile files('src/main/java/moonlightflower/com/superioribus2/WebTranslator-bin-0.2a.jar')
+}
+
+task addBuildNo {
+    def file = new File(projectDir, "src/main/java/build/BuildInfo.java")
+
+    file.delete()
+
+    def dateS = new Date().format("MM/dd/yyyy hh:mm aa");
+
+    file << "package build;\n"
+
+    file << "public class BuildInfo {\n"
+    file << "    public final static String BUILD_TIME = "
+    file << "\"" << dateS << "\"";
+    file << ";\n"
+    file << "}"
+    //def codeModel = new JCodeModel();
+}
+
+preBuild.dependsOn addBuildNo

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/activity_background"
+    android:padding="20dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_background">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView_sdk"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/main_sdk"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="10sp"
+                    android:layout_marginTop="2dp"
+                    android:gravity="left"
+                    android:layout_marginLeft="5dp" />
+
+                <TextView
+                    android:id="@+id/textView_buildNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/main_buildNo"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="10sp"
+                    android:gravity="right"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="2dp" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Superioribus"
+                android:gravity="center"
+                style="@android:style/TextAppearance.Large"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textColorHint="#000000"
+                android:fontFamily="casual"
+                android:id="@+id/textView_header" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/layout_translator"
+            android:background="@drawable/panel_background"
+            android:padding="4dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_translation_lang_source"
+                        android:background="@drawable/spinner_item_background"
+                        android:popupBackground="@drawable/popup_background" />
+
+                    <TextView
+                        android:text="@string/bottom_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_translation_lang_source_arrow"
+                        android:gravity="right|center_vertical"
+                        android:elevation="2dp"
+                        android:layout_weight="2" />
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="match_parent"
+                        android:id="@+id/progressBar_translation_lang_source"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <TextView
+                    android:text="(source)"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_sourceLang_label"
+                    android:layout_weight="2"
+                    android:gravity="center" />
+
+                <TextView
+                    android:text="\?"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView_sourceLang"
+                    android:layout_weight="2"
+                    android:gravity="right|center_vertical"
+                    android:textColorHighlight="#005555"
+                    android:textColorHint="#005555"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:shadowColor="#77000000"
+                    android:textColor="#005555"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:id="@+id/editText_translation_source"
+                android:lines="10"
+                android:inputType="textMultiLine"
+                android:background="@drawable/edit_background"
+                android:layout_weight="1"
+                android:gravity="top|left"
+                android:textSize="10sp"
+                android:padding="4dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_translation_lang_target"
+                        android:background="@drawable/spinner_item_background"
+                        android:popupBackground="@drawable/popup_background" />
+
+                    <TextView
+                        android:text="@string/bottom_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_translation_lang_target_arrow"
+                        android:elevation="1dp"
+                        android:gravity="right|center_vertical" />
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/progressBar_translation_lang_target" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:text="(target)"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_targetLang_label"
+                    android:layout_weight="2"
+                    android:gravity="center" />
+
+                <TextView
+                    android:text="\?"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView_targetLang"
+                    android:layout_weight="2"
+                    android:textColorHighlight="#005555"
+                    android:textColorHint="#005555"
+                    android:gravity="right|center_vertical"
+                    android:textSize="14sp"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowColor="#77000000"
+                    android:textColor="#005555"
+                    android:shadowRadius="1" />
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:id="@+id/editText_translation_target"
+                android:lines="10"
+                android:inputType="none"
+                android:background="@drawable/edit_background"
+                android:layout_weight="1"
+                android:gravity="top|left|center_vertical"
+                android:textSize="10sp"
+                android:padding="4dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:elegantTextHeight="true" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
+
+                <Button
+                    android:text="Swap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_translation_swap"
+                    android:gravity="center_vertical|center_horizontal|center"
+                    android:background="@drawable/button_background"
+                    android:layout_weight="1"
+                    android:onClick="button_swap_onClick"
+                    android:textColor="#000000"
+                    android:textColorHighlight="#000000"
+                    android:textColorHint="#000000"
+                    android:layout_gravity="center"
+                    android:minHeight="25dip"
+                    android:textSize="10sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:minWidth="50dip" />
+
+                <ToggleButton
+                    android:text="Translate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_translate"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_toggle_background"
+                    android:textOff="Turn on translations"
+                    android:textOn="Turn off translations"
+                    android:gravity="center_vertical|center_horizontal|center"
+                    android:layout_gravity="center"
+                    android:onClick="button_translate_onClick"
+                    android:minHeight="25dip"
+                    android:textSize="10sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Powered by Yandex.Translate"
+                android:id="@+id/textView_yandexA"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textColorHint="#000000"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="http://translate.yandex.com/"
+                android:id="@+id/textView_yandexB"
+                android:autoLink="web"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/progressBar_translator"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:gravity="center"
+        android:background="#FF000000"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Exercises"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_exercises"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="button_exercises_onClick"
+            android:textColorHighlight="#000000"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:minHeight="35dp" />
+
+        <Button
+            android:text="Vocabulary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_vocabulary"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="button_vocabulary_onClick"
+            android:textColor="#000000"
+            android:textColorHighlight="#000000"
+            android:textColorHint="#000000"
+            android:minHeight="35dp" />
+    </LinearLayout>
+
+</LinearLayout>

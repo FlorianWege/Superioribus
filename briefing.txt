@@ -1,0 +1,12 @@
+12.12., 19.12.
+
+Vortrag 10-15min/person
+Einleitung - Thema, Motivation
+Gliederung
+Voraussetzungen der App (API/Hardware/Permissions)
+Features in der App
+Sketch-Diagramme
+Use Cases
+Klassendiagramme
+Lebenszyklus-Diagramme
+Aussicht, Weiterführendes

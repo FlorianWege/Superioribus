@@ -1,0 +1,5 @@
+cd data/data/moonlightflower.com.superioribus2
+
+cd databases
+
+sqlite3 super.db

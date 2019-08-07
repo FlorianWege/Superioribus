@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_background">
+
+        <Button
+            android:text="&lt; Main"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button_main"
+            android:onClick="button_main_onClick"
+            android:background="@drawable/navi_background"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:minHeight="35dp" />
+
+        <TextView
+            android:text="Vocabulary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            style="@android:style/TextAppearance.Large"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Import"
+            android:id="@+id/button_import"
+            android:onClick="button_import_onClick"
+            android:background="@drawable/navi_background"
+            android:minHeight="35dp"
+            android:padding="10dp"
+            android:layout_margin="5dp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <ExpandableListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listView"
+                android:layout_marginTop="20dp"
+                android:dividerHeight="0dp"
+                android:divider="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="left|bottom"
+                    android:layout_margin="20dp"
+                    android:id="@+id/layout_clear">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/button_clear"
+                            android:onClick="button_clear_onClick"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/button_oval_red_background"
+                            android:layout_gravity="bottom|right"
+                            android:background="#00ffffff"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent" />
+
+                        <TextView
+                            android:text="x"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:onClick="button_clear_onClick" />
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_margin="20dp"
+                    android:id="@+id/layout_add">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/button_add"
+                            android:onClick="button_add_onClick"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/button_oval_background"
+                            android:layout_gravity="bottom|right"
+                            android:background="#00ffffff"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent" />
+
+                        <TextView
+                            android:text="+"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+
+                </FrameLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

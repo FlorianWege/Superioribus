@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginBottom="10dp">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_group"
+        android:elevation="0dp"
+        android:background="@drawable/list_group_background" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="2dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:layout_width="50dp"></LinearLayout>
+
+        <TextView
+            android:text="&lt;group>"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView_group"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:layout_width="50dp">
+
+            <Button
+                android:layout_height="match_parent"
+                android:text=">"
+                android:id="@+id/button_link"
+                android:background="@drawable/navi_background"
+                android:layout_gravity="right|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="6dp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

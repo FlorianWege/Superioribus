@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Superioribus</string>
+
+    <!--main-->
+    <string name="main_sdk">SDK: %1$d</string>
+    <string name="main_buildNo">build: %1$s</string>
+
+    <!--translator-->
+    <string name="translator_load_langs_fail">could not get languages</string>
+    <string name="translator_detect_fail">could not detect language</string>
+    <string name="translator_lang_unknown">\?</string>
+    <string name="translator_loading">...</string>
+    <string name="translator_translate_fail">could not translate</string>
+    <string name="translator_swap_fail">Failed to swap, one of the languages is not in the other list</string>
+
+    <!--vocabs-->
+    <string name="vocabs_set_list_caption">[%1$s-%2$s] %3$s (%4$d)</string>
+    <string name="vocabs_set_add_title">New set</string>
+    <string name="vocabs_set_add_duplicate">there is already a set with the same name</string>
+    <string name="vocabs_set_add_unique_name">enter unique name</string>
+    <string name="vocabs_set_add_same_lang">languages must differ</string>
+    <string name="vocabs_set_delete_title">Do you really want to delete set \'%1$s\'?</string>
+    <string name="vocabs_set_delete_note">Set \'%1$s\' deleted</string>
+    <string name="vocabs_set_delete_fail">Could not delete set \'%1$s\'</string>
+
+    <string name="vocabs_set_title">%1$s (%2$d)</string>
+
+    <string name="vocabs_entry_add_title">New terms pair</string>
+    <string name="vocabs_entry_add_source_missing">enter source term</string>
+    <string name="vocabs_entry_add_target_missing">enter target term</string>
+    <string name="vocabs_entry_add_duplicate">there is already such an entry</string>
+    <string name="vocabs_entry_delete_query">Delete %1$d item(s)?</string>
+    <string name="vocabs_entry_delete_fail">All or some entries could not be removed</string>
+
+    <string name="vocabs_import_try_leave_external_storage">Cannot leave external storage</string>
+    <string name="vocabs_import_change_dir_fail">Could not change to %1$s</string>
+    <string name="vocabs_import_title">Pick a dict.cc data base (.db)</string>
+    <string name="vocabs_import_opening_file_loading">opening %1$s...</string>
+
+    <string name="vocabs_import_file_caption">%1$s [%2$s]</string>
+
+    <!--options-->
+    <string name="reset_xp_query">Do you really want to reset your XP?</string>
+    <string name="reset_xp_note">XP reset to zero</string>
+    <string name="clear_img_cache_query">Do you really want to clear the image cache?</string>
+    <string name="clear_img_cache_note">Image cache cleared</string>
+    <string name="clear_img_cache_fail">Could not clear image cache</string>
+    <string name="clear_vocabs_query">Do you really want to clear the vocabulary?</string>
+    <string name="clear_vocabs_note">Vocabulary discarded</string>
+    <string name="clear_vocabs_fail">Could not discard vocabulary</string>
+
+    <!--baseline-->
+    <string name="baseline_no_account">&lt;no account&gt;</string>
+    <string name="baseline_xp">%1$d XP"</string>
+
+    <!--misc-->
+    <string name="account_query">Pick account</string>
+    <string name="account_set">Account set</string>
+    <string name="account_reset">Account reset</string>
+    <string name="bottom_arrow">&#9660;</string>
+    <string name="lang_name">%1$s (%2$s)</string>
+    <string name="permission_external_storage_read_fail">no permission to read files from external storage</string>
+</resources>
